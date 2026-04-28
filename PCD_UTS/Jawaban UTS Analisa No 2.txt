@@ -1,0 +1,32 @@
+Nama          : Mia Silvia Yuliati
+NIM           : 23424053
+Program Studi : Informatika, UNUSIDA
+Mata Kuliah   : Pengolahan Citra Digital
+
+=========================================
+ANALISA JAWABAN TUGAS PENGOLAHAN CITRA
+=========================================
+
+-----------------------------------------
+SOAL NO. 2
+-----------------------------------------
+A. Perbandingan Hasil Visual dan Nilai Piksel Rata-rata
+Berdasarkan penerapan tiga kernel pada citra "Ice Bear":
+
+1. LPF (Low Pass Filter):
+   - Visual: Gambar menjadi lebih halus (blur). Tepi objek seperti garis luar badan beruang dan gedung terlihat kurang tegas.
+   - Nilai Rata-rata Piksel: Hampir sama dengan citra asli, karena jumlah total bobot kernel LPF adalah 1, sehingga tidak mengubah intensitas cahaya keseluruhan secara drastis.
+
+2. HPF (High Pass Filter):
+   - Visual: Area dengan warna seragam (seperti langit dan badan beruang) berubah menjadi hitam. Namun, garis luar/tepi (outline) kacamata, badan beruang, dan gelas menyala terang, menyerupai sebuah sketsa kasar.
+   - Nilai Rata-rata Piksel: Turun drastis mendekati nilai 0. Hal ini terjadi karena total bobot kernel adalah 0, sehingga area dengan intensitas warna yang sama akan saling meniadakan menjadi hitam.
+
+3. BPF (Band Pass Filter / Sharpening):
+   - Visual: Gambar tetap menyerupai aslinya, namun garis batas antar objek (misal antara beruang dan latar belakang) menjadi jauh lebih tajam dan tegas (kontras lokal meningkat).
+   - Nilai Rata-rata Piksel: Relatif sama dengan aslinya (karena total bobot kernel = 1), tetapi detail frekuensi tinggi (tepi objek) diperkuat.
+
+B. Hubungan Domain Spasial dan Domain Frekuensi
+Filter konvolusi memanipulasi piksel secara spasial (menggunakan matriks ketetanggaan), yang secara langsung memengaruhi komponen frekuensi citra (tingkat kecepatan perubahan warna antar piksel):
+- LPF menghalangi frekuensi tinggi (detail tajam/noise) dan meloloskan frekuensi rendah (area warna seragam), menghasilkan efek blur.
+- HPF meloloskan frekuensi tinggi dan memblokir frekuensi rendah, sehingga hanya perubahan intensitas drastis (garis tepi) yang tersisa.
+- BPF (Sharpening) menonjolkan frekuensi tinggi tanpa menghilangkan frekuensi rendah sepenuhnya, sehingga objek utama tetap utuh dengan tepi yang lebih dipertegas.

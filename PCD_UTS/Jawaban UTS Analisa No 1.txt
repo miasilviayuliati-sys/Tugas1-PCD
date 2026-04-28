@@ -1,0 +1,29 @@
+Nama          : Mia Silvia Yuliati
+NIM           : 23424053
+Program Studi : Informatika, UNUSIDA
+Mata Kuliah   : Pengolahan Citra Digital
+
+=========================================
+ANALISA JAWABAN TUGAS PENGOLAHAN CITRA
+=========================================
+
+-----------------------------------------
+SOAL NO. 1 
+-----------------------------------------
+A. Perbedaan Persebaran Nilai Keabuan (Visual dan Histogram)
+Berdasarkan pengujian menggunakan citra karakter "Ice Bear", berikut adalah hasil persebaran nilai keabuannya:
+
+1. Citra Asli:
+   - Visual: Gambar didominasi warna terang (putih) pada bagian badan beruang, dengan sedikit warna gelap pada kacamata dan latar belakang gedung.
+   - Histogram: Grafik menunjukkan lonjakan ekstrim di sisi kanan (mendekati nilai 255/putih) yang merepresentasikan badan beruang. Area tengah dan kiri terisi sedikit piksel dari langit senja dan elemen gelap seperti kacamata.
+
+2. Citra Negatif:
+   - Visual: Warna berbalik drastis. Badan beruang menjadi hitam pekat, sedangkan kacamata hitamnya menyala menjadi putih terang.
+   - Histogram: Grafik merupakan cerminan dari histogram asli. Puncak yang tinggi di sisi kanan (terang) berpindah ke sisi paling kiri (gelap).
+
+3. Citra Logaritmik:
+   - Visual: Citra secara keseluruhan tampak lebih terang dan sedikit memudar. Detail bayangan pada area gelap (seperti gedung dan jalan) sedikit lebih terlihat.
+   - Histogram: Grafik meregang dan bergeser ke arah kanan. Nilai-nilai piksel gelap ditarik melebar ke arah tengah, sementara nilai piksel terang ditekan ke ujung kanan.
+
+B. Kapan Transformasi Logaritmik Lebih Bermanfaat Dibanding Negatif?
+Transformasi logaritmik lebih bermanfaat ketika kita memiliki citra yang terlalu gelap (underexposed) dan ingin memunculkan detail yang tersembunyi di area gelap tersebut tanpa merusak/memutihkan area yang sudah terang. Sebaliknya, transformasi negatif lebih berguna untuk memperjelas detail warna putih/terang pada citra dengan latar belakang dominan hitam, contohnya pada analisa citra medis seperti foto rontgen (X-Ray).
